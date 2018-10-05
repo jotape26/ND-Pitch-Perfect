@@ -38,6 +38,7 @@ class PlaybackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
+        configureButtons()
     }
 
     // MARK: Actions
@@ -63,6 +64,16 @@ class PlaybackViewController: UIViewController {
     
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
         stopAudio()
+    }
+    
+    func configureButtons(){
+        snailButton.imageView?.contentMode = .scaleAspectFit
+        chipmunkButton.imageView?.contentMode = .scaleAspectFit
+        rabbitButton.imageView?.contentMode = .scaleAspectFit
+        vaderButton.imageView?.contentMode = .scaleAspectFit
+        echoButton.imageView?.contentMode = .scaleAspectFit
+        reverbButton.imageView?.contentMode = .scaleAspectFit
+        
     }
 
 }
